@@ -13,6 +13,8 @@ import android_serialport_api.SerialPort;
 
 /**
  * @author by AllenJ on 2018/4/20.
+ *
+ * 通过串口用于接收或发送数据
  */
 
 public class SerialPortUtil {
@@ -93,6 +95,7 @@ public class SerialPortUtil {
         @Override
         public void run() {
             super.run();
+            //条件判断，只要条件为true，则一直执行这个线程
             while (isStart) {
                 if (inputStream == null) {
                     return;

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.tv);
         serialPortUtil = new SerialPortUtil();
         serialPortUtil.openSerialPort();
+        //注册EventBus
         EventBus.getDefault().register(this);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
